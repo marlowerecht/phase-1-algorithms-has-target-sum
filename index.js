@@ -1,6 +1,24 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i <= array.length; i++) {
+    const complement = target - array[i];
+    for (let j = i+1; j <= array.length; j++) {
+      if (array[j] === complement) {
+        return true;
+      } 
+      // else {
+      //     return false;
+      //   }
+    }
+  }
+  return false;
 }
+
+
+// the function takes two parameters
+  // the first is the array and the second is the target
+// check to see if the target is the sum of any of two of the values in the array
+  // if true, return true
+  //  if not, return false
 
 /* 
   Write the Big O time complexity of your function here
